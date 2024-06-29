@@ -1,0 +1,183 @@
+/*
+NAME: Ali Sattar Jabbar Qattan, UMass Lowell Computer Science, ali_qattan@student.uml.edu
+DATE: 06/28/2024 
+GUI Assignment: Scrabble 
+Copyright (c) 2024 by Qattan.  All rights reserved.  May be freely copied or excerpted for 
+educational purposes with credit to the author.
+updated by aLI June 28th
+
+This file just has terrible styles (there is no method to my madness I am just tossing whatever I came across first in here)
+some style blocks were taken from https://www.w3schools.com/css/css3_buttons.asp 
+*/
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "board board tile-holder";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr 200px;
+  height: 100vh;
+  margin: 0;
+}
+
+#submit-score {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 30px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#restart-game {
+  background-color: #4CAF50;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 30px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+
+#submit-score:hover {
+  background-color: #45a049;
+}
+
+#restart-game:hover {
+  background-color: #45a049;
+}
+
+#scrabble-header {
+  grid-area: header;
+  text-align: center;
+}
+
+#game-container {
+  grid-area: board;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#scrabble-content {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+#scrabble-board-container {
+  width: 650px;
+  height: 650px;
+  position: relative;
+}
+
+#scrabble-board {
+  width: 100%;
+  height: 100%;
+  background-image: url("ScrabbleBoard.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.scrabble-grid {
+  display: grid;
+  grid-template-columns: repeat(15, 33px);
+  grid-template-rows: repeat(15, 36px);
+  gap: 1px;
+  position: absolute;
+  top: calc(50% + 3px);
+  left: calc(50% + 18px);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+#tile-holder-container {
+  width: 100%;
+  height: 100%;
+  background-image: url("scrabble-tile-holder-406774_640.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+#tile-holder {
+  width: 100%;
+  height: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 30px);
+  grid-gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.droppable {
+  width: 33px;
+  height: 36px;
+  border: 1px solid #ccc;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.draggable {
+  width: 30px;
+  height: 30px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  cursor: move;
+}
+
+.highlight {
+  border: 1px solid limegreen;
+}
+
+#score {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.double-letter {
+  border-color: rgb(255, 234, 0);
+  border-width: 5px;
+}
+
+.triple-letter {
+  border-color: rgb(255, 234, 0);
+  border-width: 5px;
+}
+
+.double-word {
+  border-color: rgb(255, 255, 192);
+  border-width: 5px;
+}
+
+.triple-word {
+  border-color: rgb(255, 255, 0);
+  border-width: 5px;
+}

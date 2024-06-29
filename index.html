@@ -1,0 +1,59 @@
+<!--
+NAME: Ali Sattar Jabbar Qattan, UMass Lowell Computer Science, ali_qattan@student.uml.edu
+DATE: 06/28/2024 
+GUI Assignment: Scrabble 
+Copyright (c) 2024 by Qattan.  All rights reserved.  May be freely copied or excerpted for 
+educational purposes with credit to the author.
+updated by aLI June 28th
+
+just an HTML file (I omitted the restart button into the script.js file because of some black magic that was happening)
+
+everything is self explanatory here so I won't comment on it
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Scrabble</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="Scrabble_Pieces_AssociativeArray_Jesse.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div id="game-container">
+
+    <div id="scrabble-header">
+        <h1>Scrabble</h1>
+    </div>
+
+    <div id="score">Score: 0</div>
+
+    <div id="scrabble-content">
+
+        <div id="scrabble-board-container">
+            <div id="scrabble-board">
+                <div class="scrabble-grid"></div>
+            </div>
+            
+        </div>
+        <button id="submit-score">Submit Score</button>
+        <div id="tile-holder-container">
+            <img id="tile-holder">
+            <div class="grid"> <!-- I realized there is a better way for this LMAO-->
+                <div class="droppable"></div>
+                <div class="droppable"></div>
+                <div class="droppable"></div>
+                <div class="droppable"></div>
+                <div class="droppable"></div>
+                <div class="droppable"></div>
+                <div class="droppable"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
